@@ -1,7 +1,7 @@
 # Личный проект «Что посмотреть»
 
 * Студент: [Anatoly Udavikhin](https://up.htmlacademy.ru/nodejs-api/2/user/132786).
-* Наставник: `Неизвестно`.
+* Наставник: [Олег Зубов](https://htmlacademy.ru/profile/id42701).
 
 ---
 
