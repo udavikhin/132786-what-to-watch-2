@@ -1,5 +1,5 @@
-import {Genres} from "./genre.enum.js"
-import {User} from "./user.type.js"
+import {Genres} from './genre.enum.js';
+import {User} from './user.type.js';
 
 export type Film = {
   title: string,
@@ -14,7 +14,7 @@ export type Film = {
   director: string,
   runtime: number,
   commentsAmount: number,
-  user: User,
+  user: User | null,
   posterSrc: string,
   backgroundSrc: string,
   bgColor: string
