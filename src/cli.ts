@@ -4,11 +4,13 @@ import VersionCommand from './cli-command/version-command.js';
 import HelpCommand from './cli-command/help-command.js';
 import CLIApplication from './app/cli-application.js';
 import ImportCommand from './cli-command/import-command.js';
+import GenerateCommand from './cli-command/generate-command.js';
 
 const manager = new CLIApplication();
 manager.registerCommands([
   new HelpCommand,
   new VersionCommand,
-  new ImportCommand
+  new ImportCommand,
+  new GenerateCommand
 ]);
 manager.processCommand(process.argv);

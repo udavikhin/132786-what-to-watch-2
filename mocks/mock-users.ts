@@ -6,5 +6,17 @@ export const mockUsers: User[] = [
     email: 'random-user@example.com',
     avatarSrc: 'avatar.jpg',
     password: '123456'
+  },
+  {
+    username: 'carl1337"',
+    email: 'carlito@example.com',
+    avatarSrc: 'userpic.jpg',
+    password: 'qwertyui'
+  },
+  {
+    username: 'ivanivanov',
+    email: 'ivantheterrible@example.com',
+    avatarSrc: 'image-user.jpg',
+    password: 'abcdefgh'
   }
 ];
