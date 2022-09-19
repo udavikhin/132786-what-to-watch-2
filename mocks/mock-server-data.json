@@ -1,0 +1,99 @@
+{
+  "api": {
+    "titles": [
+      "The Shawshank Redemption",
+      "The Godfather",
+      "The Dark Knight",
+      "12 Angry Men",
+      "Schindler's List",
+      "Pulp Fiction",
+      "The Good, the Bad and the Ugly",
+      "Forrest Gump",
+      "Fight Club",
+      "Inception"
+    ],
+    "descriptions": [
+      "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+      "The aging patriarch of an organized crime dynasty in postwar New York City transfers control of his clandestine empire to his reluctant youngest son.",
+      "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, Batman must accept one of the greatest psychological and physical tests of his ability to fight injustice.",
+      "The jury in a New York City murder trial is frustrated by a single member whose skeptical caution forces them to more carefully consider the evidence before jumping to a hasty verdict.",
+      "In German-occupied Poland during World War II, industrialist Oskar Schindler gradually becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.",
+      "The lives of two mob hitmen, a boxer, a gangster and his wife, and a pair of diner bandits intertwine in four tales of violence and redemption.",
+      "A bounty hunting scam joins two men in an uneasy alliance against a third in a race to find a fortune in gold buried in a remote cemetery.",
+      "The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal and other historical events unfold from the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+      "An insomniac office worker and a devil-may-care soap maker form an underground fight club that evolves into much more.",
+      "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster."
+    ],
+    "previewVideoSrcs": [
+      "preview.mp4",
+      "trailer.mp4",
+      "film-cut.mp4",
+      "movie-preview.mp4",
+      "film-teaser.mp4"
+    ],
+    "videoSrcs": [
+      "film-ext.mp4",
+      "movie-link.mp4",
+      "film-src.mp4",
+      "file-movie.mp4",
+      "film-fhd.mp4"
+    ],
+    "actors": [
+      "Tim Robbins",
+      "Morgan Freeman",
+      "Bob Gunton",
+      "Al Pacino",
+      "Marlon Brando",
+      "James Caan",
+      "Christian Bale",
+      "Heath Ledger",
+      "Aaron Eckhart",
+      "John Travolta",
+      "Uma Thurman",
+      "Samuel L. Jackson",
+      "Tom Hanks",
+      "Robin Wright",
+      "Gary Sinise",
+      "Brad Pitt",
+      "Edward Norton",
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Elliot Page"
+    ],
+    "directors": [
+      "Francis Ford Coppola",
+      "Frank Darabont",
+      "Quentin Tarantino",
+      "Robert Zemeckis",
+      "David Fincher",
+      "Christopher Nolan"
+    ],
+    "users": [
+      "random-user",
+      "carl1337",
+      "ivanivanov"
+    ],
+    "posterSrcs": [
+      "poster-film.jpg",
+      "hq-poster.jpg",
+      "poster-img.jpg",
+      "film-image.jpg",
+      "poster-pic.jpg"
+    ],
+    "backgroundSrcs": [
+      "bg-img.jpg",
+      "movie-background.jpg",
+      "backg-film.jpg",
+      "background-img.jpg",
+      "film-bg.jpg"
+    ],
+    "bgColors": [
+      "#356201",
+      "#000361",
+      "#0500A2",
+      "#AAF820",
+      "#880116",
+      "#452134"
+    ]
+  }
+}
