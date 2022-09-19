@@ -1,44 +1,34 @@
-import {readFileSync} from 'fs';
-import {Film} from '../../types/film.type.js';
-import {Genres} from '../../types/genre.enum.js';
+import EventEmitter from 'events';
+import {createReadStream} from 'fs';
 import {FileReaderInterface} from './file-reader.interface.js';
-import {mockUsers} from '../../../mocks/mock-users.js';
 
-export default class TSVFileReader implements FileReaderInterface {
-  private rawData = '';
+export default class TSVFileReader extends EventEmitter implements FileReaderInterface {
 
-  constructor(public filename: string) {}
-
-  public read(): void {
-    this.rawData = readFileSync(this.filename, 'utf-8');
+  constructor(public filename: string) {
+    super();
   }
 
-  public toArray(): Film[] {
-    if (!this.rawData) {
-      return [];
+  public async read(): Promise<void> {
+    const stream = createReadStream(this.filename, {
+      encoding: 'utf-8'
+    });
+
+    let lineRead = '';
+    let endLinePos = -1;
+    let importedRowsCount = 0;
+
+    for await (const chunk of stream) {
+      lineRead += chunk.toString();
+
+      while ((endLinePos = lineRead.indexOf('\n')) >= 0) {
+        const completeRow = lineRead.slice(0, endLinePos + 1);
+        lineRead = lineRead.slice(++endLinePos);
+        importedRowsCount++;
+
+        this.emit('lineread', completeRow);
+      }
     }
 
-    return this.rawData
-      .split('\n')
-      .filter((row) => row.trim() !== '')
-      .map((row) => row.split('\t'))
-      .map(([title, description, addedDate, genre, releaseYear, rating, previewVideoSrc, videoSrc, starring, director, runtime, commentsAmount, user, posterSrc, backgroundSrc, bgColor]) => ({
-        title,
-        description,
-        addedDate: new Date(Number(addedDate)),
-        genre: genre as Genres,
-        releaseYear: Number(releaseYear),
-        rating: Number(rating),
-        previewVideoSrc,
-        videoSrc,
-        starring,
-        director,
-        runtime: Number(runtime),
-        commentsAmount: Number(commentsAmount),
-        user: mockUsers.find((entry) => entry.username === user) ?? null,
-        posterSrc,
-        backgroundSrc,
-        bgColor
-      }));
+    this.emit('fileread', importedRowsCount);
   }
 }
